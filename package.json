@@ -1,0 +1,22 @@
+{
+  "name": "aoa-marketplace-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20", "pnpm": ">=9" },
+  "scripts": {
+    "aggregate": "pnpm --filter @armyofagents/aoa-marketplace-builder aggregate",
+    "validate": "pnpm --filter @armyofagents/aoa-marketplace-builder validate",
+    "publish-cdn": "pnpm --filter @armyofagents/aoa-marketplace-builder publish-cdn",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "build": "pnpm -r build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "typescript": "^5.4.0"
+  }
+}

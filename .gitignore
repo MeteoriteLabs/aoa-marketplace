@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.env
+.env.local
+.changeset/*.md
+!.changeset/README.md
+!.changeset/config.json
